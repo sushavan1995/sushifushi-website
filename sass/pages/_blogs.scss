@@ -1,0 +1,86 @@
+.blog {
+    .blog__container {
+        margin: 0 0 40px 0;
+        border: 1px solid #ddd;
+        .blog__title {
+            padding: 20px 15px;
+            h3 {
+                color: $color-heading-primary;
+                font-size: 2rem;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+        .blog__author {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px 20px 15px;
+            p {
+                color: $color-red;
+                margin: 0;
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .blog__content {
+            padding: 0 15px 20px 15px;
+            p {
+                a {
+                    color: $color-red;
+                    &:hover {
+                        color: $color-golden;
+                    }
+                }
+            }
+        }
+    }
+    .blog__sidebar {
+        padding: 40px 20px;
+        margin: 0 0 40px 0;
+        .blog__search {
+            display: flex;
+            margin: 0 0 40px 0;
+            .blog__input-container {
+                width: 80%;
+                position: relative;
+                margin: 0 10px 0 0;
+                input {
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid #ddd;
+                    padding: 0 15px 0 35px;
+            
+                }
+                i {
+                    position: absolute;
+                    top: 25px;
+                    left:15px;
+                    color: $color-text-primary;
+                }
+            }
+            
+        }
+        .blog__keyword {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    margin: 0 0 25px 0;
+                    a {
+                        color: $color-text-primary;
+                        margin-right: 15px;
+                        text-decoration: underline;
+                        font-size: 1.15rem;
+                        &:hover {
+                            color: $color-red;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+          
+        }
+    }
+}

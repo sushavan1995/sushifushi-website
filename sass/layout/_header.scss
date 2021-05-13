@@ -1,0 +1,89 @@
+header {
+    margin: 85px 0 0 0;
+    &.masthead {
+        height: 95vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        @include bg-center-img;
+        background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/page-header/home-header.jpg");
+        .masthead-text {
+            h1 {
+                font-size: 4rem;
+                color: $color-heading-primary;
+                margin: 0 0 20px 0;
+            }
+            p {
+                a {
+                    margin-right: 25px;
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    &.page__title {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background: $color-dark;
+       height: 50vh;
+       @include bg-center-img;
+       h2 {
+           font-size: 3.5rem;
+           color: #fff;
+           text-transform: capitalize;
+       }
+       &.about__header {
+           background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/about/about-header.jpg");
+        }
+        &.career__header {
+           background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/page-header/career-header.jpg");
+        }
+        &.menu__header {
+            background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/page-header/our-menu-header.jpg"); 
+        }
+        &.blog__header {
+            background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/page-header/blog-header.jpg"); 
+        }
+        &.contact__header {
+            background-image: linear-gradient(rgba(40,47,64,0.75),rgba(40,47,64,0.65)),url("/assets/images/page-header/contact-header.jpg"); 
+        }
+    }
+}
+@media(min-width: 768px) {
+    header {
+        &.masthead {
+            .masthead-text{
+                p {
+                    a{
+                        &:nth-child(2) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width: 992px) {
+    header {
+        margin: 110px 0 0 0;
+        /*
+        &.masthead {
+            background-image: url("/assets/images/masthead/Chef\ Vector\ 1.svg");
+            background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: left;
+        }
+        */
+    }
+}

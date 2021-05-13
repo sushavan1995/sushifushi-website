@@ -1,0 +1,37 @@
+.awards {
+    .awards__img {
+        margin: 0 0 40px 0;
+        img{
+            margin: 0 auto;
+            border-radius: 2px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+.team {
+    .team__member {
+        margin: 0 0 40px 0;
+        padding: 0 15px;
+        .team__member-img {
+            margin: 0 0 20px 0;
+            img {
+                border-radius: 50%;
+            }
+        }
+        .team__member-profile {
+            h4 {
+                font-size: 1.5rem;
+            }
+            p {
+                margin: 0;
+                color: $color-golden;
+                font-style: italic;
+            }
+        }
+        
+    }
+    .team__member-career {
+        margin: 30px 0 0 0;
+    }
+}

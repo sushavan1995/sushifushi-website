@@ -1,0 +1,109 @@
+#mainNav {
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    @include transition-ease(0.3s);
+    .navbar-brand {
+        margin-left: 12px;
+        padding: 20px 0;
+        @include transition-ease(0.3s);
+    }
+    .navbar-toggler {
+        margin-right: 15px;
+    }
+    .navbar-nav {
+        background: $color-golden;
+        padding:0;
+        .nav-item {
+            .nav-link {
+                color: #222;
+                padding: 15px;
+                font-family: $font-heading;
+                font-size: 1.1rem;
+                text-transform: capitalize;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                &:hover {
+                    background: $color-dark;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 992px) {
+    #mainNav {
+        .navbar-brand {
+            padding: 40px 0;
+        }
+        .navbar-nav {
+            background: transparent;
+            margin: 0 0 0 auto;
+            align-items: center;
+            .nav-item {
+                .nav-link {
+                    margin: 0 5px;
+                    position: relative;
+                    font-size: 1rem;
+                    padding: 15px 10px;
+                    &:hover {
+                        background: transparent;
+                        color: $color-red;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom:0;
+                        left:0;
+                        height: 2px;
+                        width:0;
+                        background: $color-red;
+                        @include transition-ease(0.3s);
+                    }
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                    &.order-cta {
+                        padding: 12px 26px;
+                        border: 1px solid $color-red;
+                        &:hover {
+                            background: $color-red;
+                            color: #fff;
+                        }
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+        &.navbar-shrink {
+            .navbar-brand {
+                padding: 12px 0;
+            }
+        }
+    }
+}
+@media(min-width: 1200px) {
+    #mainNav {
+        .navbar-brand {
+            padding: 40px 0;
+        }
+        .navbar-nav {
+            background: transparent;
+            margin: 0 0 0 auto;
+            align-items: center;
+            .nav-item {
+                .nav-link {
+                    margin: 0 12px;
+                    font-size: 1.1rem;
+                    padding: 15px;
+                }
+            }
+        }
+}
+}

@@ -1,0 +1,28 @@
+.btn-main {
+    padding: 14px 32px;
+    display: inline-block;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.125em;
+    color: $color-dark;
+    letter-spacing: 0.1px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 150%;
+    font-weight: 500;
+    position: relative;
+    white-space: nowrap;
+    z-index: 1;
+    position: relative;
+    background: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $color-red;
+    &:hover {
+        background: $color-red;
+        color: #fff;
+    }
+}
+.btn-huge {
+    @extend .btn-main;
+    padding: 16px 38px;
+}

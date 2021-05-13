@@ -1,0 +1,169 @@
+.menu-main {
+    .menu-main__tabs {
+        .menu-main--tabs-nav {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 75px 0;
+            li {
+                padding: 10px 0;
+                &.tab-active {
+                    border-bottom: 2px solid $color-red;
+                }
+                a { 
+                    padding: 10px 15px;
+                    color: $color-heading-primary;
+                    font-size: 1.15rem;
+                }
+            }
+        }
+    }
+    .menu-main__container {
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        margin: 0 0 50px 0;
+        &:hover {
+            border: 1px solid $color-golden;
+        }
+        .menu-main__details {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 10px 10px 10px;
+            .menu-main__title {
+                h4 {
+                    font-size: 1.35rem;
+                    color: $color-heading-primary;
+                    margin:0;
+                    font-weight: 600;
+                }
+            }
+            .menu-main__price 
+            {
+                h4 {
+                    font-size: 1.35rem;
+                    color: $color-golden;
+                    margin:0; 
+                    font-weight: 600;
+                }
+            }
+            
+        }
+        .menu-main__description {
+            padding: 0 10px 20px 10px;
+            p {
+                margin:0;
+                color: $color-text-primary;
+            }
+        }
+    }
+    &.v2 {
+        .menu--controller {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 50px 0;
+            flex-direction: column-reverse;
+            button {
+                margin: 0 15px 25px 0;
+                &.btn-main {
+                    padding: 14px 20px;
+                }
+            }
+            .menu--search {
+                margin: 0 0 25px 0;
+                input {
+                    height: 60px;
+                    width: 100%;
+                    padding: 0 20px;
+                    border: 1px solid #ddd;
+                    border-radius: 0px;
+                    &[type="text"]:focus {
+                        outline: none;
+                        border: 1px solid $color-golden;
+                        border-radius: 0px;
+                    }
+                }
+            }
+            
+            .is-checked {
+                background: $color-red;
+                color: #fff;
+            }
+        }
+        .grid {
+            margin: 0 -15px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .element-item {
+                float: left;
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media(min-width: 576px) {
+    .menu-main {
+        .menu-main__tabs {
+            .menu-main--tabs-nav {
+                li {
+                    a {
+                        font-size: 1.45rem;
+                    }
+                }
+            }
+        }
+        &.v2 {
+            .menu--controller {
+                    button {
+                        margin: 0 10px 0 0;
+                    }
+                
+            }
+            .grid {
+                .element-item {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 768px) {
+    /*
+    .menu-main {
+        &.v2 {
+            .grid {
+                .element-item {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    */
+}
+@media(min-width: 992px) {
+    .menu-main {
+        &.v2 {
+            .menu--controller {
+                flex-direction: row;
+                button {
+                    margin: 0 10px 0 0;
+                    &.btn-main {
+                        padding: 14px 32px;
+                    }
+                }
+                .menu--search {
+                    width: 300px;
+                    margin: 0;
+                    
+                }
+            }
+            .grid {
+                .element-item {
+                    width: 33.3%;
+                }
+            }
+        }
+    }
+}

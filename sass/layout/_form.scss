@@ -1,0 +1,100 @@
+.reservation {
+    .reservation__pretext {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .reservation__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .reservation__input__container {
+            width: 100%;
+            margin: 0 0 20px 0;
+            position: relative;
+            input {
+                width:100%;
+                height: 60px;
+                border: none;
+                &:focus {
+                    border: 1px solid $color-golden;
+                    outline: none;
+                }
+            }
+            input[type="text"] {
+                padding: 0 40px;
+            }
+            input[type="number"] {
+                padding: 0 40px;
+            }
+            i {
+                position: absolute;
+                left: 10px;
+                top: 19px;
+                font-size: 1.35rem;
+                color: $color-golden;
+            }
+        }
+        
+    }
+}
+@media(min-width: 992px) {
+    .reservation {
+        .reservation__form {
+            .reservation__input__container {
+                width: 25%;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+.career {
+    .career__form {
+        margin: 50px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        .input-container{
+            width: 100%;
+            margin: 0 0 20px 0;
+            input {
+                width:100%;
+                height:50px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                &:focus {
+                    outline: none;
+                    border: 1px solid $color-golden;
+                }
+            }
+            
+            textarea {
+                height: 150px;
+                width: 100%;
+                padding: 15px;
+                border: 1px solid #ddd;
+                &:focus {
+                    outline: none;
+                    border: 1px solid $color-golden;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 992px) {
+    .career {
+        .career__form {
+            .input-container {
+                padding: 0 10px;
+                width: 50%;
+                &.lg {
+                    width: 100%;
+                }
+            }
+            &.contact-us__form {
+                .input-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

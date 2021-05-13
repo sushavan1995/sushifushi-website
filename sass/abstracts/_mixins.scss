@@ -1,0 +1,12 @@
+@mixin transition-ease($time) {
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -ms-transition: all $time ease;
+    transition: all $time ease;
+}
+
+@mixin  bg-center-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

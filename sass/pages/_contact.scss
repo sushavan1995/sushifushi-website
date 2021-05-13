@@ -1,0 +1,39 @@
+.contact-us {
+    .contact-us__map {
+        margin: 0 0 40px 0;
+        overflow-x: scroll;
+    }
+    .contact-us__details {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        .contact-us__icon {
+            width: 50px;
+            i {
+                color: $color-red;
+                font-size: 1.5rem;
+                
+            }
+        }
+        .contact-us__info {
+            p {
+                margin: 0;
+                color: $color-heading-primary;
+            }
+        }
+    }
+    .bg-custom-light {
+        background: #fff;
+    }
+}
+@media(min-width: 992px) {
+    .contact-us {
+        .contact-us__map {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .bg-custom-light {
+            background: #f3f3f3;
+        }
+    }
+}
