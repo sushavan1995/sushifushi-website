@@ -19,7 +19,6 @@ header {
             }
             p {
                 a {
-                    margin-right: 25px;
                     &:nth-child(2) {
                         display: none;
                     }
@@ -64,6 +63,7 @@ header {
             .masthead-text{
                 p {
                     a{
+                        margin-right: 25px;
                         &:nth-child(2) {
                             display: inline-block;
                         }
@@ -75,7 +75,7 @@ header {
 }
 @media(min-width: 992px) {
     header {
-        margin: 110px 0 0 0;
+        margin: 150px 0 0 0;
         /*
         &.masthead {
             background-image: url("/assets/images/masthead/Chef\ Vector\ 1.svg");

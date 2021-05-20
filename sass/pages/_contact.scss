@@ -8,10 +8,17 @@
         align-items: center;
         padding: 20px;
         .contact-us__icon {
-            width: 50px;
+            margin: 0 40px 0 0;
             i {
                 color: $color-red;
                 font-size: 1.5rem;
+                height: 60px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
                 
             }
         }
@@ -36,4 +43,39 @@
             background: #f3f3f3;
         }
     }
+}
+
+/* submitting message */
+.message {
+    position: fixed;
+    bottom: 15px;
+    right: -400px;
+    padding: 15px;
+    background: #fff;
+    box-shadow:0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    border-radius: 2px;
+    @include transition-ease(0.3s);
+    &.show {
+        right: 15px;
+    }
+    .submission__text {
+        font-size: 0.9rem;
+        color: $color-text-primary;
+        margin: 0 0 10px 0;
+        i {
+            color: #2ecc71;
+            margin-right: 10px;
+        }
+    }
+    .message__close--button {
+        button {
+            margin: 0 0 0 auto;
+            border: 1px solid #ddd;
+            color: $color-text-primary;
+            padding: 4px 12px;
+            display: block;
+        }
+    }
+
 }

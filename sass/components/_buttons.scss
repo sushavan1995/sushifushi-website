@@ -3,7 +3,7 @@
     display: inline-block;
     font-family: 'Barlow', sans-serif;
     font-size: 1.125em;
-    color: $color-dark;
+    color: #fff;
     letter-spacing: 0.1px;
     font-weight: normal;
     text-align: center;
@@ -13,13 +13,24 @@
     white-space: nowrap;
     z-index: 1;
     position: relative;
-    background: transparent;
+    background: $color-red;
     border-width: 2px;
     border-style: solid;
     border-color: $color-red;
     &:hover {
-        background: $color-red;
+        background: $color-golden;
         color: #fff;
+        border-color: $color-golden;
+    }
+}
+.btn-secondary {
+    @extend .btn-main;
+    color: #fff;
+    border-color: $color-golden;
+    background: $color-golden;
+    &:hover {
+        background: $color-red;
+        border-color: $color-red;
     }
 }
 .btn-huge {

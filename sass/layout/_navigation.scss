@@ -3,6 +3,34 @@
     padding: 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     @include transition-ease(0.3s);
+    .top-header {
+        width:100%;
+        padding: 15px;
+        background: $color-golden;
+        color: #fff;
+        p {
+            font-size: 0.95rem;
+            margin:0;
+        }
+        .top-header__social-links {
+            p {
+                a {
+                    color: #fff;
+                    margin: 0 10px;
+                    &:hover {
+                        color: $color-red;
+                    }
+                }
+            }
+        }
+        .top-header__contact {
+            p {
+                i {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
     .navbar-brand {
         margin-left: 12px;
         padding: 20px 0;
@@ -10,13 +38,21 @@
     }
     .navbar-toggler {
         margin-right: 15px;
+        z-index: 999;
     }
     .navbar-nav {
         background: $color-golden;
-        padding:0;
+        /*
+        position: fixed;
+        width: 250px;
+        text-align: center;
+        top: 0;
+        right: 0;
+        padding-top: 60px;
+        */
         .nav-item {
             .nav-link {
-                color: #222;
+                color: #fff;
                 padding: 15px;
                 font-family: $font-heading;
                 font-size: 1.1rem;
@@ -31,6 +67,13 @@
         }
     }
 }
+@media(min-width: 768px) {
+    #mainNav {
+        &.hide-top-header {
+            top: -62px;
+        }
+    }
+}
 @media(min-width: 992px) {
     #mainNav {
         .navbar-brand {
@@ -42,6 +85,7 @@
             align-items: center;
             .nav-item {
                 .nav-link {
+                    color: $color-heading-primary;
                     margin: 0 5px;
                     position: relative;
                     font-size: 1rem;
@@ -68,8 +112,11 @@
                     &.order-cta {
                         padding: 12px 26px;
                         border: 1px solid $color-red;
+                        background: $color-red;
+                        color: #fff;
                         &:hover {
-                            background: $color-red;
+                            background: $color-golden;
+                            border: 1px solid $color-golden;
                             color: #fff;
                         }
                         &:after {
@@ -82,6 +129,7 @@
             }
         }
         &.navbar-shrink {
+            padding: 10px 0 0 0;
             .navbar-brand {
                 padding: 12px 0;
             }

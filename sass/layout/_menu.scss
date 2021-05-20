@@ -84,7 +84,8 @@
             }
             
             .is-checked {
-                background: $color-red;
+                background: $color-golden;
+                border: 2px solid $color-golden;
                 color: #fff;
             }
         }
@@ -99,6 +100,17 @@
                 float: left;
                 width: 100%;
                 padding: 0 15px;
+                .menu-main__img {
+                    overflow:hidden;
+                    img {
+                        @include transition-ease(0.3s);
+                        &:hover {
+                            -webkit-transform: scale(1.15);
+                            -moz-transform: scale(1.15);
+                            transform: scale(1.15);
+                        }
+                    }
+                }
             }
         }
     }
